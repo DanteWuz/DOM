@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, inital-scale-1.0">
+        <title>Seletores no DOM</title>
+        <link rel="stylesheet" href="styles.css">
+     </head>
+     <body>
+        <h1>Seletores com o DOM</h1>
+        <div id="exemploid">Selecionado por ID</div>
+        <div class="exemploClasse">Selecionado por classe 1</div>
+        <div class="exemploClasse">Selecionado por classe 2</div>
+        <div class="exemploClasse">Selecionado por classe 3</div>
+        <p>Selecionando por Tag</p>
+        <p class="paragrafo">Selecionando por Query Selector</p>
+        <p class="paragrafo">Selecionando por Query Selector ALL</p>
+
+        <button onclick="demonstrarSeletores()">Clique para modificar</button>
+
+        <script>
+            function demonstrarSeletores(){
+            {
+                    let elementoPorId = document.getElementById("exemploid");
+                    elementoPorId.style.color - "blue";
+                    console.log("Selecionado por ID:", elementoPorId)
+            }
+            let elementosPorClasse = document.querySelectorAll(".exemploClasse")
+            elementosPorClasse.forEach(elemento =>
+            {
+                 elemento.style.backgroundcolor - "yellow";
+                 console.log("Selecionando por classe", elemento)
+            });
+            let elementoporTag = document.querySelectorAll("p")
+            elementoporTag.forEach(elemento =>
+            {
+                elemento.style.fontMeight = "bold";
+            });
+
+            let elementoPorQuery = document.querySelector(".paragrafo")
+            elementoPorQuery.style.fontSize= "20px";
+            console.log("Selecionado por Query Selector:", elementoPorQuery);
+                
+                let elementosPorQueryALL = document.querySelectorAll(".paragrafo");
+                elementosPorQueryALL.forEach(elemento =>
+            {
+                elemento.style.textDecoration = "underline";
+                console.log("Selecionado por Query Selector ALL", elemento)
+            });
+            }
+
+        </script>
+     </body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#elementoParaEstilizar {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-top: 20px;
+    width: 300px;
+    text-align: center;
+}
